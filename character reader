@@ -1,0 +1,14 @@
+def char_freq(s):
+    freq = {}
+     for char in s:
+        if char.isalpha(): 
+            freq[char] = freq.get(char, 0) + 1
+    
+    sorted_chars = sorted(freq.keys(), key=lambda x: (x.islower(), x))
+    
+    for char in sorted_chars:
+        print(f"{char}: {freq[char]}")
+ 
+s = input("Enter the string: ")
+
+char_freq(s)
